@@ -1,0 +1,26 @@
+{{page-title 'Archived Users'}}
+<div class="container">
+  <div class="columns is-centered">
+<h1>Frank here</h1>
+    {{#each @model as |user|}}
+      <div class="column">
+
+        <LinkTo @route="users.user" @model={{user}}>
+          <div class="user-select is-220px">
+            <img
+              class="is-pulled-left"
+              src={{user.image}}
+              width="60px"
+              alt="profile-image"
+            />
+            <p>Frank {{user.name}}</p>
+			
+          </div>
+        </LinkTo>
+		
+      </div>
+    {{/each}}
+	<br />
+<h1>test</h1>
+  </div>
+</div>

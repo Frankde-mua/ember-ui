@@ -7,24 +7,23 @@
           Back to users
         </button>
       </LinkTo>
-
       <div class="user-profile">
-
         <figure class="avatar">
           <img src={{@model.image}} width="256px" alt="User" />
         </figure>
-
         <p class="title has-text-white my-2">
           {{@model.name}}
         </p>
-
-        <p class="subtitle has-text-white my-2">
-          Example Value:
-          {{@model.value}}
+		{{#if @model.value}}
+		<p class="subtitle has-text-white my-2">
+          {{@model.stmt}}
         </p>
-
-        {{!-- Place the component to archive/unarchive users here --}}
-
+		<br />
+		{{/if}}
+		
+		<button class="button mb-2" type="button" {{on "click" @model.changVal}}>
+          Archive/Unarchive
+        </button>
       </div>
     </div>
   </div>

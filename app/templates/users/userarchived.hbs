@@ -1,26 +1,12 @@
-{{page-title 'User'}}
+{{page-title 'Archived Users'}}
 <div class="container">
   <div class="columns is-centered">
 	<h1 align="center"> Active users</h1>
-	<br />
     {{#each @model as |user|}}
       <div class="column">
-
+	  {{#if user.value}}
         <LinkTo @route="users.user" @model={{user}}>
-		{{#if user.value}}
-          <div class="user-select is-220px" hidden>
-            <img
-              class="is-pulled-left"
-              src={{user.image}}
-              width="60px"
-              alt="profile-image"
-            />
-            <p> {{user.name}}</p>
-			<p> {{user.value}}</p>
-			
-          </div>
-		  {{ else }}
-		  <div class="user-select is-220px" >
+          <div class="user-select is-220px">
             <img
               class="is-pulled-left"
               src={{user.image}}
@@ -29,18 +15,16 @@
             />
             <p> {{user.name}}</p>
 			
-			
           </div>
-		  {{/if}}
         </LinkTo>
-		
+		{{/if}}
       </div>
     {{/each}}
 	<br />
-		<LinkTo @route="users.userarchived">
+	<LinkTo @route="users">
         <button class="button mb-2" type="button">
-          Archives
+          Back to users
         </button>
-     </LinkTo>
+      </LinkTo>
   </div>
 </div>

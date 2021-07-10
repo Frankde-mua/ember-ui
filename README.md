@@ -9,7 +9,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone https://github.com/lekkercode-com/ember-ui`
+* `https://github.com/Frankde-mua/ember-ui`
 * `cd user-archiving`
 * `npm install`
 
